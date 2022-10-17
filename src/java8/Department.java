@@ -3,19 +3,19 @@ package java8;
 import java.util.Comparator;
 
 public class Department implements Comparable <Department>{
-    private int depId;
+    private Integer depId;
     private String deptName;
 
-    public Department(int depId, String deptName) {
+    public Department(Integer depId, String deptName) {
         this.depId = depId;
         this.deptName = deptName;
     }
 
-    public int getDepId() {
+    public Integer getDepId() {
         return depId;
     }
 
-    public void setDepId(int depId) {
+    public void setDepId(Integer depId) {
         this.depId = depId;
     }
 
@@ -38,16 +38,19 @@ public class Department implements Comparable <Department>{
 
     @Override
     public int compareTo(Department o) {
-        if(this.depId==o.getDepId()){
+        /*if(this.depId==o.getDepId()){
             return 0;
-        } else if (this.depId>o.getDepId()) {
+        } else if (this.depId<o.getDepId()) {
             return 1;
 
         }
         else {
             return -1;
-        }
-
+        }*/
+        //ascendeing order
+return this.getDeptName().compareTo(o.getDeptName());
+//decending order
+        //return o.getDeptName().compareTo(this.deptName);
     }
 }
 

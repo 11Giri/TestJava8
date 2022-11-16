@@ -3,19 +3,19 @@ package java8;
 import java.util.Comparator;
 
 public class Employee implements Comparable<Employee> {
-    private int empId;
+    private Integer empId;
     private String empName;
     private Double salary;
     private int leaveBal;
 
-    public Employee(int empId, String empName, Double salary, int leaveBal) {
+    public Employee(Integer empId, String empName, Double salary, int leaveBal) {
         this.empId = empId;
         this.empName = empName;
         this.salary = salary;
         this.leaveBal = leaveBal;
     }
 
-    public int getEmpId() {
+    public Integer getEmpId() {
         return empId;
     }
 
@@ -63,7 +63,8 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public int compareTo(Employee o) {
-        return this.empName.compareTo(o.getEmpName());
+        return o.getEmpId().compareTo(this.getEmpId());
+      // return o.empName.compareTo(this.getEmpName());
        // return this.salary.compareTo(o.getSalary());
     }
 }

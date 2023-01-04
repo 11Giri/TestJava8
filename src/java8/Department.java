@@ -5,10 +5,12 @@ import java.util.Comparator;
 public class Department implements Comparable <Department>{
     private Integer depId;
     private String deptName;
+    private String employeeName;
 
-    public Department(Integer depId, String deptName) {
+    public Department(Integer depId, String deptName,String employeeName) {
         this.depId = depId;
         this.deptName = deptName;
+        this.employeeName=employeeName;
     }
 
     public Integer getDepId() {
